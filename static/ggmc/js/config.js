@@ -85,8 +85,8 @@ var INSTALLED={
         "point_sources":[],
         "line_sources":[],
 		"gpx_sources":[
-            {"filename":"gtown-44.gpx","color":"rgba(255,0,0,1)","fill":'rgba(0,255,0,0.25)','width':3,"category":"Busmaps","layer_name":"Bus 44"},
-            {"filename":"gtown-45.gpx","color":"rgba(155,110,0,1)","fill":'rgba(0,255,0,0.25)','width':3,"category":"Busmaps","layer_name":"Bus 45"},
+            {"filename":"gtown-44.gpx","color":"rgba(255,0,0,1)","fill":'rgba(0,255,0,0.25)','width':3,"category":"Bus Routes","layer_name":"Bus 44"},
+            {"filename":"gtown-45.gpx","color":"rgba(155,110,0,1)","fill":'rgba(0,255,0,0.25)','width':3,"category":"Bus Routes","layer_name":"Bus 45"},
 		]
     }
 	
