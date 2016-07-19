@@ -1,0 +1,70 @@
+<html>
+<head>
+
+<meta charset="UTF-8"></meta>
+
+<style type="text/css">
+body{
+	margin:0;
+}
+.background{
+	width:100%;height:100%;
+	background:#AAAAAA;
+}
+.control_panel{
+	position:fixed;
+	overflow:auto;
+	height:100%;width:250px;
+	background:#333333;
+	color:white;
+	text-align:center;
+	left:-250px;
+	transition:left 0.5s ease;
+	
+}
+.control_panel.show{
+	left:0px;	
+}
+
+</style>
+<script type="text/javascript" src="./static/ggmc/js/jquery.js"></script>
+<script type="text/javascript" src="./static/ggmc/js/underscore.js"></script>
+
+<script type="text/javascript">
+	function init(){
+		
+		$("#background").click(function(){$("#control_panel").toggleClass("show")});
+		
+		var my_template=$("#my_template").html();//gets template script content as string
+		console.log("my_template="+my_template);
+		
+		var set_function = _.template(my_template);//makes a function out of my_template
+		console.log("set_function="+set_function);
+		
+		
+		var layers=["Main Rivers","Little Towns"];
+		$("#control_panel").html(
+			set_function({name:'Main Rivers'})+
+			set_function({name:'Main Rivers'})
+		);
+		
+		
+	}
+</script>
+
+<script id="my_template" type="text/template">
+	<div id="<%= name %>"><h3> <%= name %> </h3></div>
+</script>
+
+
+</head>
+
+
+<body onload="init();">
+<div id="control_panel" class="control_panel">
+	
+</div>
+<div id="background" class="background"></div>
+
+</body>
+</html>
